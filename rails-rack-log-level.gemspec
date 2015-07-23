@@ -1,17 +1,17 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'rack/log/level/version'
+require 'rails/rack/log/level/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "rack-log-level"
-  spec.version       = Rack::Log::Level::VERSION
+  spec.name          = "rails-rack-log-level"
+  spec.version       = Rails::Rack::Log::Level::VERSION
   spec.authors       = ["Maxim Pechnikov"]
   spec.email         = ["parallel588@gmail.com"]
 
   spec.summary       = %q{Rack log level.}
   spec.description   = %q{Rack log level.}
-  spec.homepage      = "https://github.com/parallel588/rack-log-level."
+  spec.homepage      = "https://github.com/parallel588/rails-rack-log-level."
 
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
   spec.bindir        = "exe"

@@ -22,7 +22,11 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+MyApp::Application.config.middleware.insert_before(Rails::Rack::Logger, Rails::Rack::Log::Level) do
+  add_rule %r{\/checkout(.*)}, level: 0, default_level: Rails.logger.level
+  add_rule '/my/shopping_bag', level: 0, default_level: Rails.logger.level
+end
+
 
 ## Development
 
